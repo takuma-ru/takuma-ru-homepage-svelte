@@ -17,13 +17,13 @@
   background-color: #FEFEFE;
 }
 
-.linkHeaderBtn_select {
+/*.linkHeaderBtn_select {
   width: 24px;
   height: 24px;
   margin-right: 16px;
   text-decoration: none;
   background-color: #FEFEFE;
-}
+}*/
 
 .text {
   font-size: 16px;

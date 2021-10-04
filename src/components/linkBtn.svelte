@@ -2,7 +2,10 @@
 	import { link, push } from 'svelte-spa-router';
 </script>
 
-<div class='linkHeaderBtn' on:click={() => push('/')}>
+<div
+  class='linkHeaderBtn'
+  on:click={() => push('/about')}
+>
   <span class="text">
     <slot />
   </span>
@@ -15,6 +18,7 @@
   margin-right: 16px;
   text-decoration: none;
   background-color: #FEFEFE;
+  cursor: pointer;
 }
 
 /*.linkHeaderBtn_select {

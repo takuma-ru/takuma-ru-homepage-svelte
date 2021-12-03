@@ -21,12 +21,6 @@
     <div class="one"></div>
     <div class="one"></div>
   </div>
-  <div id="link_header">
-    <LinkBtn link-path="/">Home</LinkBtn>
-    <LinkBtn link-path="/about">About</LinkBtn>
-    <LinkBtn link-path="/app">APP</LinkBtn>
-    <LinkBtn link-path="/contact">CONTACT</LinkBtn>
-  </div>
   <div id="deco_right_top">
     <div class="path_name">{$location}</div>
     <div class="long_bar beside">
@@ -49,6 +43,18 @@
       <div class="short_bar bottom"></div>
     </div>
     <div class="long_bar vertical"></div>
+  </div>
+  <div id="deco_contents_left_top">
+    <div class="one"></div>
+  </div>
+  <div id="deco_contents_right_bottom">
+    <div class="one"></div>
+  </div>
+  <div id="link_header">
+    <LinkBtn link-path="/">Home</LinkBtn>
+    <LinkBtn link-path="/about">About</LinkBtn>
+    <LinkBtn link-path="/app">APP</LinkBtn>
+    <LinkBtn link-path="/contact">CONTACT</LinkBtn>
   </div>
 </div>
 
@@ -187,7 +193,7 @@
 }
 
 #deco_right_center .one::before {
-  position:absolute;
+  position: absolute;
   content: "";
   width: 4px;
   height: 16px;
@@ -254,5 +260,80 @@
 #deco_right_bottom .short_bar.bottom {
   right: 0px;
   top: 6px;
+}
+
+/* deco_contents_left_top */
+#deco_contents_left_top {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  left: 56px;
+  top: 56px;
+}
+
+#deco_contents_left_top::before {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 100%;
+
+  background-color: #101010;
+}
+
+#deco_contents_left_top::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+
+  background-color: #101010;
+}
+
+#deco_contents_left_top .one {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  margin: 4px;
+
+  background-color: #101010;
+}
+
+/* deco_contents_right_bottom */
+#deco_contents_right_bottom {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  right: 56px;
+  bottom: 56px;
+}
+
+#deco_contents_right_bottom::before {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 100%;
+  right: 0px;
+
+  background-color: #101010;
+}
+
+#deco_contents_right_bottom::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  bottom: 0px;
+
+  background-color: #101010;
+}
+
+#deco_contents_right_bottom .one {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  right: 4px;
+  bottom: 4px;
+
+  background-color: #101010;
 }
 </style>

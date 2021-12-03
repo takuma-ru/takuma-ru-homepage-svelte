@@ -22,6 +22,6 @@ main {
 	width: calc(100vw - 96px);
 	margin-left: 48px;
 	padding-top: 48px;
-	min-height: calc(100vh -96px);
+	min-height: calc(100vh - 96px);
 }
 </style>

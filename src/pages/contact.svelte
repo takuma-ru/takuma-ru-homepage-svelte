@@ -1,6 +1,6 @@
 <div id="container">
   <div>
-    現在製作中。お待ちください。
+    contact !
   </div>
 </div>
 

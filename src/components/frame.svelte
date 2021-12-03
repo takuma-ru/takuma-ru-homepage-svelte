@@ -25,6 +25,7 @@
     <LinkBtn link-path="/">Home</LinkBtn>
     <LinkBtn link-path="/about">About</LinkBtn>
     <LinkBtn link-path="/app">APP</LinkBtn>
+    <LinkBtn link-path="/contact">CONTACT</LinkBtn>
   </div>
   <div id="deco_right_top">
     <div class="path_name">{$location}</div>

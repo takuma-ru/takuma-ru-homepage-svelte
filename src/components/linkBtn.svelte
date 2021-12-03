@@ -1,10 +1,12 @@
 <script lang="ts">
 	import { link, push } from 'svelte-spa-router';
+
+  export let linkPath = $$props['link-path']
 </script>
 
 <div
   class='linkHeaderBtn'
-  on:click={() => push('/about')}
+  on:click={() => push(linkPath)}
 >
   <span class="text">
     <slot />
@@ -34,6 +36,8 @@
   font-size: 16px;
   line-height: 16px;
   padding: 4px;
+
+  font-weight: bold;
   color: #0084AD;
 }
 </style>

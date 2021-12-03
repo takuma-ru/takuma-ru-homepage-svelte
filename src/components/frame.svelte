@@ -3,7 +3,7 @@
 	import { location } from 'svelte-spa-router';
 </script>
 
-<div>
+<div id="main_frame">
   <div class="frame"></div>
   <div id="deco_left_top">
     <div class="one"></div>
@@ -22,9 +22,9 @@
     <div class="one"></div>
   </div>
   <div id="link_header">
-    <LinkBtn>Home</LinkBtn>
-    <LinkBtn></LinkBtn>
-    <LinkBtn></LinkBtn>
+    <LinkBtn link-path="/">Home</LinkBtn>
+    <LinkBtn link-path="/about">About</LinkBtn>
+    <LinkBtn link-path="/app">APP</LinkBtn>
   </div>
   <div id="deco_right_top">
     <div class="path_name">{$location}</div>
@@ -52,6 +52,12 @@
 </div>
 
 <style>
+#main_frame {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
 .frame {
   z-index: 0;
   position: fixed;
@@ -64,7 +70,7 @@
 #deco_left_top {
   position: absolute;
   margin-top: 48px;
-  margin-left: 8px;
+  margin-left: 16px;
   width: 16px;
   height: 112px;
 }
@@ -87,7 +93,7 @@
   position: absolute;
   bottom: 0px;
   left: 48px;
-  height: 24px;
+  height: 16px;
 }
 
 #deco_left_bottom .one {

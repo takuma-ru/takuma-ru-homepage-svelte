@@ -5,19 +5,44 @@
 
 <div>
   <div class="frame"></div>
-  <div id="decoLeftTop">
+  <div id="deco_left_top">
     <div class="one"></div>
     <div class="two"></div>
     <div class="two"></div>
     <div class="two"></div>
   </div>
-  <div id="linkHeader">
+  <div id="deco_left_bottom">
+    <div class="one"></div>
+    <div class="one"></div>
+    <div class="one"></div>
+    <div class="one"></div>
+    <div class="one"></div>
+    <div class="one"></div>
+    <div class="one"></div>
+    <div class="one"></div>
+  </div>
+  <div id="link_header">
     <LinkBtn>Home</LinkBtn>
     <LinkBtn></LinkBtn>
     <LinkBtn></LinkBtn>
   </div>
-  <div id="decoRightTop">
+  <div id="deco_right_top">
     <div class="path_name">{$location}</div>
+    <div class="long_bar beside">
+      <div class="short_bar top"></div>
+      <div class="short_bar bottom"></div>
+    </div>
+    <div class="long_bar vertical"></div>
+  </div>
+  <div id="deco_right_center">
+    <div class="one"></div>
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="one"></div>
+    <div class="one"></div>
+  </div>
+  <div id="deco_right_bottom">
+    <div class="bottom_contents"></div>
     <div class="long_bar beside">
       <div class="short_bar top"></div>
       <div class="short_bar bottom"></div>
@@ -32,10 +57,11 @@
   position: fixed;
   width: calc(100vw - 96px);
   height: calc(100vh - 96px);
-  border: solid 48px #68B9D2;
+  border: solid 48px #0084AD;
 }
 
-#decoLeftTop {
+/* deco_left_top */
+#deco_left_top {
   position: absolute;
   margin-top: 48px;
   margin-left: 8px;
@@ -43,69 +69,87 @@
   height: 112px;
 }
 
-#decoLeftTop .one {
+#deco_left_top .one {
   width: 100%;
   height: 48px;
-  background-color: #FEFEFE;
+  background-color: #101010;
 }
 
-#decoLeftTop .two {
+#deco_left_top .two {
   width: 100%;
   height: 8px;
   margin-top: 8px;
-  background-color: #FEFEFE;
+  background-color: #101010;
 }
 
-#linkHeader {
-  display: grid;
+/* deco_left_bottom */
+#deco_left_bottom {
+  position: absolute;
+  bottom: 0px;
+  left: 48px;
+  height: 24px;
+}
+
+#deco_left_bottom .one {
+  float: left;
+  width: 4px;
+  height: 100%;
+  margin-right: 8px;
+  margin-left: 0px;
+  background: #101010;
+}
+
+/* link_header */
+#link_header {
   position: absolute;
   height: 24px;
   left: 152px;
   top: 12px;
-  display: inline-block;
 }
 
-#decoRightTop {
+/* deco_right_top */
+#deco_right_top {
   position: absolute;
   top: 24px;
   right: 24px;
 }
 
-#decoRightTop .long_bar {
+#deco_right_top .long_bar {
   position: absolute;
   width: 128px;
   height: 2px;
-  background-color: #FEFEFE;
+  background-color: #101010;
 }
 
-#decoRightTop .long_bar.beside {
+#deco_right_top .long_bar.beside {
   right: 0px;
   top: 0px;
 }
 
-#decoRightTop .long_bar.vertical {
+#deco_right_top .long_bar.vertical {
   right: -64px;
   top: 64px;
   transform: rotate(-90deg);
 }
 
-#decoRightTop .short_bar {
+#deco_right_top .short_bar {
   position: relative;
   width: 16px;
   height: 2px;
-  background-color: #FEFEFE;
+  background-color: #101010;
 }
 
-#decoRightTop .short_bar.top {
+#deco_right_top .short_bar.top {
   right: 0px;
   top: -8px;
 }
 
-#decoRightTop .short_bar.bottom {
+#deco_right_top .short_bar.bottom {
   right: 0px;
   top: 6px;
 }
 
+/* path_name */
 .path_name {
   position: relative;
   width: fit-content;
@@ -114,7 +158,94 @@
   line-height: 24px;
   transform: translateY(-50%);
   font-size: 24px;
-  color: #FEFEFE;
+  color: #101010;
 }
 
+/* deco_right_center */
+#deco_right_center {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 16px;
+}
+
+#deco_right_center .one {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  margin-bottom: 8px;
+}
+
+#deco_right_center .one::before {
+  position:absolute;
+  content: "";
+  width: 4px;
+  height: 16px;
+  left: 0px;
+
+  background-color: #101010;
+}
+
+#deco_right_center .one::after {
+  position:absolute;
+  content: "";
+  width: 4px;
+  height: 16px;
+  right: 0px;
+
+  background-color: #101010;
+}
+
+#deco_right_center .two {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  margin-bottom: 8px;
+
+  background-color: #101010;
+}
+
+/* deco_right_bottom */
+#deco_right_bottom {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+}
+#deco_right_bottom .long_bar {
+  position: absolute;
+  width: 128px;
+  height: 2px;
+  background-color: #101010;
+}
+
+#deco_right_bottom .long_bar.beside {
+  right: 0px;
+  top: 0px;
+}
+
+#deco_right_bottom .long_bar.vertical {
+  right: -64px;
+  bottom: 61px;
+  transform: rotate(-90deg);
+}
+
+#deco_right_bottom .short_bar {
+  position: relative;
+  width: 16px;
+  height: 2px;
+  background-color: #101010;
+}
+
+#deco_right_bottom .short_bar.top {
+  right: 0px;
+  top: -8px;
+}
+
+#deco_right_bottom .short_bar.bottom {
+  right: 0px;
+  top: 6px;
+}
 </style>

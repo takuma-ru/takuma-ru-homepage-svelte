@@ -4,22 +4,27 @@
 </script>
 
 <div id="main_frame">
-  <div class="frame"></div>
+  <div class="frame">
+    <div class="top" />
+    <div class="bottom" />
+    <div class="left" />
+    <div class="right" />
+  </div>
   <div id="deco_left_top">
-    <div class="one"></div>
-    <div class="two"></div>
-    <div class="two"></div>
-    <div class="two"></div>
+    <div class="one" />
+    <div class="two" />
+    <div class="two" />
+    <div class="two" />
   </div>
   <div id="deco_left_bottom">
-    <div class="one"></div>
-    <div class="one"></div>
-    <div class="one"></div>
-    <div class="one"></div>
-    <div class="one"></div>
-    <div class="one"></div>
-    <div class="one"></div>
-    <div class="one"></div>
+    <div class="one" />
+    <div class="one" />
+    <div class="one" />
+    <div class="one" />
+    <div class="one" />
+    <div class="one" />
+    <div class="one" />
+    <div class="one" />
   </div>
   <div id="deco_right_top">
     <div class="path_name">{$location}</div>
@@ -30,11 +35,11 @@
     <div class="long_bar vertical"></div>
   </div>
   <div id="deco_right_center">
-    <div class="one"></div>
-    <div class="one"></div>
-    <div class="two"></div>
-    <div class="one"></div>
-    <div class="one"></div>
+    <div class="one" />
+    <div class="one" />
+    <div class="two" />
+    <div class="one" />
+    <div class="one" />
   </div>
   <div id="deco_right_bottom">
     <div class="bottom_contents"></div>
@@ -59,25 +64,56 @@
 </div>
 
 <style>
-#main_frame {
+.frame {
   position: fixed;
-  width: 100vw;
-  height: 100vh;
+  z-index: 1;
 }
 
-.frame {
-  z-index: 0;
+.frame .top {
   position: fixed;
-  width: calc(100vw - 96px);
-  height: calc(100vh - 96px);
-  border: solid 48px #0084AD;
+  width: 100vw;
+  height: 48px;
+  top: 0px;
+
+  background-color: #0084AD;
+}
+
+.frame .bottom {
+  position: fixed;
+  width: 100vw;
+  height: 48px;
+  bottom: 0px;
+
+  background-color: #0084AD;
+}
+
+.frame .left {
+  position: fixed;
+  width: 48px;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+
+  background-color: #0084AD;
+}
+
+.frame .right {
+  position: fixed;
+  width: 48px;
+  height: 100vh;
+  top: 0px;
+
+  right: 0px;
+
+  background-color: #0084AD;
 }
 
 /* deco_left_top */
 #deco_left_top {
-  position: absolute;
-  margin-top: 48px;
-  margin-left: 16px;
+  position: fixed;
+  z-index: 2;
+  top: 48px;
+  left: 16px;
   width: 16px;
   height: 112px;
 }
@@ -97,7 +133,8 @@
 
 /* deco_left_bottom */
 #deco_left_bottom {
-  position: absolute;
+  position: fixed;
+  z-index: 2;
   bottom: 0px;
   left: 48px;
   height: 16px;
@@ -114,7 +151,8 @@
 
 /* link_header */
 #link_header {
-  position: absolute;
+  position: fixed;
+  z-index: 2;
   height: 24px;
   left: 152px;
   top: 12px;
@@ -122,7 +160,8 @@
 
 /* deco_right_top */
 #deco_right_top {
-  position: absolute;
+  position: fixed;
+  z-index: 2;
   top: 24px;
   right: 24px;
 }
@@ -176,7 +215,8 @@
 
 /* deco_right_center */
 #deco_right_center {
-  position: absolute;
+  position: fixed;
+  z-index: 2;
   right: 16px;
   top: 50%;
 
@@ -223,7 +263,8 @@
 
 /* deco_right_bottom */
 #deco_right_bottom {
-  position: absolute;
+  position: fixed;
+  z-index: 2;
   bottom: 24px;
   right: 24px;
 }
@@ -264,7 +305,8 @@
 
 /* deco_contents_left_top */
 #deco_contents_left_top {
-  position: absolute;
+  position: fixed;
+  z-index: 2;
   width: 36px;
   height: 36px;
   left: 56px;
@@ -300,7 +342,8 @@
 
 /* deco_contents_right_bottom */
 #deco_contents_right_bottom {
-  position: absolute;
+  position: fixed;
+  z-index: 2;
   width: 36px;
   height: 36px;
   right: 56px;

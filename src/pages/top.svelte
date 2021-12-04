@@ -1,3 +1,13 @@
+<script lang="ts">
+	import { push } from 'svelte-spa-router';
+
+  let contents_right_items = [
+    { name: 'ABOUT', link: '/about' },
+    { name: 'APP', link: '/app' },
+    { name: 'CONTACT', link: '/contact' },
+  ]
+</script>
+
 <div id="container">
   <div id="grid">
     <div id="contents_left">
@@ -6,7 +16,14 @@
       </span>
     </div>
     <div id="contents_right">
-      right
+      {#each contents_right_items as item, index}
+        <button
+          on:click={() => push(item.link)}
+          style="grid-row: {index + 2};"
+        >
+          {item.name}
+        </button>
+      {/each}
     </div>
   </div>
 </div>
@@ -58,5 +75,52 @@
 #contents_right {
   grid-row: 1;
   grid-column: 2;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+#contents_right button {
+  position: relative;
+  width: 50%;
+  font-size: 3vw;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#contents_right button::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 4px;
+  top: 0%;
+  left: 0%;
+  background-color: #101010;
+  transform: scale(0, 1);
+  transition: transform .4s;
+  transform-origin: left;
+}
+
+#contents_right button:hover::before {
+  transform: scale(1);
+}
+
+#contents_right button::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 4px;
+  bottom: 0%;
+  right: 0%;
+  background-color: #101010;
+  transform: scale(0, 1);
+  transition: transform .5s;
+  transform-origin: right;
+}
+
+#contents_right button:hover::after {
+  transform: scale(1);
 }
 </style>

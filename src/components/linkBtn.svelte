@@ -1,6 +1,7 @@
 <script lang="ts">
-	import { link, push } from 'svelte-spa-router';
+	import { push } from 'svelte-spa-router';
 
+  // props
   export let linkPath = $$props['link-path']
 </script>
 
